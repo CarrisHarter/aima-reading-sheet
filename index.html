@@ -41,12 +41,31 @@
   #resetbtn { background: transparent; color: var(--muted); border: 1px solid var(--border);
                border-radius: 6px; padding: 1px 10px; cursor: pointer; font: inherit; font-size: 12px; }
   #resetbtn:hover { color: var(--accent); border-color: var(--accent); }
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .sheet { padding: 14px 12px; border-radius: 10px; }
+    h1 { font-size: 17px; }
+    .meta, .pctline { font-size: 12px; }
+    table, tbody { display: block; width: 100%; }
+    tr.week { display: block; }
+    tr.week td { padding-top: 12px; }
+    tr[data-day] { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px;
+                   border: 1px solid var(--rowline); border-radius: 8px;
+                   padding: 7px 10px; margin: 0 0 8px; }
+    tr[data-day] td { display: block; border-bottom: none; padding: 0; }
+    td.mark { order: 0; }
+    td.mark input { width: 20px; height: 20px; }
+    td.day { order: 1; font-size: 13px; }
+    td.pp { order: 2; margin-left: auto; }
+    td.date { order: 3; flex-basis: 100%; font-size: 12px; }
+    td.ch { order: 4; flex-basis: 100%; white-space: normal; }
+  }
 </style>
 </head>
 <body>
   <div class="sheet">
     <h1>📖 AIMA 4th Global Edition</h1>
-    <div class="meta"><span id="daycount">0/56 days</span> · PDF pp. 19–1118 · start 2026-11-11 · deadline <b>2027-01-05</b> · generated 2026-11-11T09:50:15.723Z</div>
+    <div class="meta"><span id="daycount">0/56 days</span> · PDF pp. 19–1118 · start 2026-11-11 · deadline <b>2027-01-05</b> · generated 2026-11-11T09:51:45.524Z</div>
     <div class="bar"><div id="barfill" style="width:0%"></div></div>
     <div class="pctline"><span class="pct" id="pct">0%</span> <span class="meta">· <span id="pagecount">0/1100 pp. read</span> · 29 chapters</span></div>
     <table>
