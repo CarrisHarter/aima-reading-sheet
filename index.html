@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIMA 4th Global Edition — reading sheet</title>
+<style>
+  :root {
+    --bg: #121212; --surface: #1e1e1e; --accent: #e68e0d; --success: #FFC107;
+    --text: #bebebe; --muted: #848484; --dim: #656565; --border: #464646; --rowline: #232323;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); margin: 0; padding: 24px;
+         font-family: ui-monospace, "CaskaydiaCove Nerd Font", Menlo, Consolas, monospace; }
+  .sheet { max-width: 900px; margin: 0 auto; background: var(--surface);
+           border: 1px solid var(--border); border-radius: 12px; padding: 22px 26px; }
+  h1 { color: var(--accent); font-size: 20px; margin: 0 0 6px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .bar { height: 14px; background: var(--bg); border: 1px solid var(--border);
+         border-radius: 7px; overflow: hidden; margin-bottom: 4px; }
+  .bar > div { height: 100%; background: var(--accent); }
+  .pctline { font-size: 13px; margin-bottom: 14px; }
+  .pct { color: var(--success); font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 8px; border-bottom: 1px solid var(--rowline); text-align: left; }
+  tr.week td { color: var(--muted); font-weight: bold; padding-top: 14px;
+               border-bottom: 1px solid var(--border); }
+  tr.today td { background: #2b2111; }
+  tr.done td { color: var(--dim); text-decoration: line-through; }
+  tr.done td.mark { color: var(--success); text-decoration: none; }
+  .mark { color: var(--accent); }
+  .day { color: var(--accent); white-space: nowrap; }
+  .date { color: var(--muted); white-space: nowrap; }
+  .pp { white-space: nowrap; }
+  .pages { color: var(--muted); }
+  .ch { color: var(--muted); }
+  .ms { color: var(--accent); font-weight: bold; }
+  .hint { color: var(--dim); font-size: 12px; margin-top: 14px; }
+  .mark { cursor: pointer; }
+  .mark input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; vertical-align: middle; }
+  #resetbtn { background: transparent; color: var(--muted); border: 1px solid var(--border);
+               border-radius: 6px; padding: 1px 10px; cursor: pointer; font: inherit; font-size: 12px; }
+  #resetbtn:hover { color: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <h1>📖 AIMA 4th Global Edition</h1>
+    <div class="meta"><span id="daycount">0/56 days</span> · PDF pp. 19–1118 · start 2026-11-11 · deadline <b>2027-01-05</b> · generated 2026-11-11T09:46:24.353Z</div>
+    <div class="bar"><div id="barfill" style="width:0%"></div></div>
+    <div class="pctline"><span class="pct" id="pct">0%</span> <span class="meta">· <span id="pagecount">0/1100 pp. read</span> · 29 chapters</span></div>
+    <table>
+      <tr class="week"><td colspan="5">── Week 1 · 2026-11-11 → 2026-11-17 · pp. 19–156 ──</td></tr>
+      <tr data-day="1" data-pages="20" data-date="2026-11-11" class="today"><td class="mark"><input type="checkbox" data-day="1" aria-label="Day 1 done"></td><td class="day">▶ d01</td><td class="date">Wed 2026-11-11</td><td class="pp">pp. 19–38 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 1 · Introduction</td></tr>
+      <tr data-day="2" data-pages="20" data-date="2026-11-12" class=""><td class="mark"><input type="checkbox" data-day="2" aria-label="Day 2 done"></td><td class="day">d02</td><td class="date">Thu 2026-11-12</td><td class="pp">pp. 39–58 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 2 · Intelligent Agents</td></tr>
+      <tr data-day="3" data-pages="20" data-date="2026-11-13" class=""><td class="mark"><input type="checkbox" data-day="3" aria-label="Day 3 done"></td><td class="day">d03</td><td class="date">Fri 2026-11-13</td><td class="pp">pp. 59–78 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="4" data-pages="19" data-date="2026-11-14" class=""><td class="mark"><input type="checkbox" data-day="4" aria-label="Day 4 done"></td><td class="day">d04</td><td class="date">Sat 2026-11-14</td><td class="pp">pp. 79–97 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 3 · Solving Problems by Searching</td></tr>
+      <tr data-day="5" data-pages="19" data-date="2026-11-15" class=""><td class="mark"><input type="checkbox" data-day="5" aria-label="Day 5 done"></td><td class="day">d05</td><td class="date">Sun 2026-11-15</td><td class="pp">pp. 98–116 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="6" data-pages="20" data-date="2026-11-16" class=""><td class="mark"><input type="checkbox" data-day="6" aria-label="Day 6 done"></td><td class="day">d06</td><td class="date">Mon 2026-11-16</td><td class="pp">pp. 117–136 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 4 · Search in Complex Environments</td></tr>
+      <tr data-day="7" data-pages="20" data-date="2026-11-17" class=""><td class="mark"><input type="checkbox" data-day="7" aria-label="Day 7 done"></td><td class="day">d07</td><td class="date">Tue 2026-11-17</td><td class="pp">pp. 137–156 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr class="week"><td colspan="5">── Week 2 · 2026-11-18 → 2026-11-24 · pp. 157–294 ──</td></tr>
+      <tr data-day="8" data-pages="20" data-date="2026-11-18" class=""><td class="mark"><input type="checkbox" data-day="8" aria-label="Day 8 done"></td><td class="day">d08</td><td class="date">Wed 2026-11-18</td><td class="pp">pp. 157–176 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 5 · Constraint Satisfaction Problems</td></tr>
+      <tr data-day="9" data-pages="20" data-date="2026-11-19" class=""><td class="mark"><input type="checkbox" data-day="9" aria-label="Day 9 done"></td><td class="day">d09</td><td class="date">Thu 2026-11-19</td><td class="pp">pp. 177–196 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 6 · Adversarial Search and Games</td></tr>
+      <tr data-day="10" data-pages="20" data-date="2026-11-20" class=""><td class="mark"><input type="checkbox" data-day="10" aria-label="Day 10 done"></td><td class="day">d10</td><td class="date">Fri 2026-11-20</td><td class="pp">pp. 197–216 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="11" data-pages="19" data-date="2026-11-21" class=""><td class="mark"><input type="checkbox" data-day="11" aria-label="Day 11 done"></td><td class="day">d11</td><td class="date">Sat 2026-11-21</td><td class="pp">pp. 217–235 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 7 · Logical Agents</td></tr>
+      <tr data-day="12" data-pages="19" data-date="2026-11-22" class=""><td class="mark"><input type="checkbox" data-day="12" aria-label="Day 12 done"></td><td class="day">d12</td><td class="date">Sun 2026-11-22</td><td class="pp">pp. 236–254 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="13" data-pages="20" data-date="2026-11-23" class=""><td class="mark"><input type="checkbox" data-day="13" aria-label="Day 13 done"></td><td class="day">d13</td><td class="date">Mon 2026-11-23</td><td class="pp">pp. 255–274 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 8 · First-Order Logic</td></tr>
+      <tr data-day="14" data-pages="20" data-date="2026-11-24" class=""><td class="mark"><input type="checkbox" data-day="14" aria-label="Day 14 done"></td><td class="day">d14</td><td class="date">Tue 2026-11-24</td><td class="pp">pp. 275–294 <span class="pages">(20p)</span></td><td class="ch"><span class="ms">★ 25%</span></td></tr>
+      <tr class="week"><td colspan="5">── Week 3 · 2026-11-25 → 2026-12-01 · pp. 295–432 ──</td></tr>
+      <tr data-day="15" data-pages="20" data-date="2026-11-25" class=""><td class="mark"><input type="checkbox" data-day="15" aria-label="Day 15 done"></td><td class="day">d15</td><td class="date">Wed 2026-11-25</td><td class="pp">pp. 295–314 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 9 · Inference in First-Order Logic</td></tr>
+      <tr data-day="16" data-pages="20" data-date="2026-11-26" class=""><td class="mark"><input type="checkbox" data-day="16" aria-label="Day 16 done"></td><td class="day">d16</td><td class="date">Thu 2026-11-26</td><td class="pp">pp. 315–334 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 10 · Knowledge Representation</td></tr>
+      <tr data-day="17" data-pages="20" data-date="2026-11-27" class=""><td class="mark"><input type="checkbox" data-day="17" aria-label="Day 17 done"></td><td class="day">d17</td><td class="date">Fri 2026-11-27</td><td class="pp">pp. 335–354 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="18" data-pages="19" data-date="2026-11-28" class=""><td class="mark"><input type="checkbox" data-day="18" aria-label="Day 18 done"></td><td class="day">d18</td><td class="date">Sat 2026-11-28</td><td class="pp">pp. 355–373 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 11 · Automated Planning</td></tr>
+      <tr data-day="19" data-pages="19" data-date="2026-11-29" class=""><td class="mark"><input type="checkbox" data-day="19" aria-label="Day 19 done"></td><td class="day">d19</td><td class="date">Sun 2026-11-29</td><td class="pp">pp. 374–392 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="20" data-pages="20" data-date="2026-11-30" class=""><td class="mark"><input type="checkbox" data-day="20" aria-label="Day 20 done"></td><td class="day">d20</td><td class="date">Mon 2026-11-30</td><td class="pp">pp. 393–412 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 12 · Quantifying Uncertainty</td></tr>
+      <tr data-day="21" data-pages="20" data-date="2026-12-01" class=""><td class="mark"><input type="checkbox" data-day="21" aria-label="Day 21 done"></td><td class="day">d21</td><td class="date">Tue 2026-12-01</td><td class="pp">pp. 413–432 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 13 · Probabilistic Reasoning</td></tr>
+      <tr class="week"><td colspan="5">── Week 4 · 2026-12-02 → 2026-12-08 · pp. 433–570 ──</td></tr>
+      <tr data-day="22" data-pages="20" data-date="2026-12-02" class=""><td class="mark"><input type="checkbox" data-day="22" aria-label="Day 22 done"></td><td class="day">d22</td><td class="date">Wed 2026-12-02</td><td class="pp">pp. 433–452 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="23" data-pages="20" data-date="2026-12-03" class=""><td class="mark"><input type="checkbox" data-day="23" aria-label="Day 23 done"></td><td class="day">d23</td><td class="date">Thu 2026-12-03</td><td class="pp">pp. 453–472 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="24" data-pages="20" data-date="2026-12-04" class=""><td class="mark"><input type="checkbox" data-day="24" aria-label="Day 24 done"></td><td class="day">d24</td><td class="date">Fri 2026-12-04</td><td class="pp">pp. 473–492 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 14 · Probabilistic Reasoning over Time</td></tr>
+      <tr data-day="25" data-pages="19" data-date="2026-12-05" class=""><td class="mark"><input type="checkbox" data-day="25" aria-label="Day 25 done"></td><td class="day">d25</td><td class="date">Sat 2026-12-05</td><td class="pp">pp. 493–511 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="26" data-pages="19" data-date="2026-12-06" class=""><td class="mark"><input type="checkbox" data-day="26" aria-label="Day 26 done"></td><td class="day">d26</td><td class="date">Sun 2026-12-06</td><td class="pp">pp. 512–530 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 15 · Making Simple Decisions</td></tr>
+      <tr data-day="27" data-pages="20" data-date="2026-12-07" class=""><td class="mark"><input type="checkbox" data-day="27" aria-label="Day 27 done"></td><td class="day">d27</td><td class="date">Mon 2026-12-07</td><td class="pp">pp. 531–550 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="28" data-pages="20" data-date="2026-12-08" class=""><td class="mark"><input type="checkbox" data-day="28" aria-label="Day 28 done"></td><td class="day">d28</td><td class="date">Tue 2026-12-08</td><td class="pp">pp. 551–570 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 16 · Making Complex Decisions <span class="ms">★ 50%</span></td></tr>
+      <tr class="week"><td colspan="5">── Week 5 · 2026-12-09 → 2026-12-15 · pp. 571–708 ──</td></tr>
+      <tr data-day="29" data-pages="20" data-date="2026-12-09" class=""><td class="mark"><input type="checkbox" data-day="29" aria-label="Day 29 done"></td><td class="day">d29</td><td class="date">Wed 2026-12-09</td><td class="pp">pp. 571–590 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 17 · Multiagent Decision Making</td></tr>
+      <tr data-day="30" data-pages="20" data-date="2026-12-10" class=""><td class="mark"><input type="checkbox" data-day="30" aria-label="Day 30 done"></td><td class="day">d30</td><td class="date">Thu 2026-12-10</td><td class="pp">pp. 591–610 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="31" data-pages="20" data-date="2026-12-11" class=""><td class="mark"><input type="checkbox" data-day="31" aria-label="Day 31 done"></td><td class="day">d31</td><td class="date">Fri 2026-12-11</td><td class="pp">pp. 611–630 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="32" data-pages="19" data-date="2026-12-12" class=""><td class="mark"><input type="checkbox" data-day="32" aria-label="Day 32 done"></td><td class="day">d32</td><td class="date">Sat 2026-12-12</td><td class="pp">pp. 631–649 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 18 · Probabilistic Programming</td></tr>
+      <tr data-day="33" data-pages="19" data-date="2026-12-13" class=""><td class="mark"><input type="checkbox" data-day="33" aria-label="Day 33 done"></td><td class="day">d33</td><td class="date">Sun 2026-12-13</td><td class="pp">pp. 650–668 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="34" data-pages="20" data-date="2026-12-14" class=""><td class="mark"><input type="checkbox" data-day="34" aria-label="Day 34 done"></td><td class="day">d34</td><td class="date">Mon 2026-12-14</td><td class="pp">pp. 669–688 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 19 · Learning from Examples</td></tr>
+      <tr data-day="35" data-pages="20" data-date="2026-12-15" class=""><td class="mark"><input type="checkbox" data-day="35" aria-label="Day 35 done"></td><td class="day">d35</td><td class="date">Tue 2026-12-15</td><td class="pp">pp. 689–708 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr class="week"><td colspan="5">── Week 6 · 2026-12-16 → 2026-12-22 · pp. 709–846 ──</td></tr>
+      <tr data-day="36" data-pages="20" data-date="2026-12-16" class=""><td class="mark"><input type="checkbox" data-day="36" aria-label="Day 36 done"></td><td class="day">d36</td><td class="date">Wed 2026-12-16</td><td class="pp">pp. 709–728 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="37" data-pages="20" data-date="2026-12-17" class=""><td class="mark"><input type="checkbox" data-day="37" aria-label="Day 37 done"></td><td class="day">d37</td><td class="date">Thu 2026-12-17</td><td class="pp">pp. 729–748 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 20 · Knowledge in Learning</td></tr>
+      <tr data-day="38" data-pages="20" data-date="2026-12-18" class=""><td class="mark"><input type="checkbox" data-day="38" aria-label="Day 38 done"></td><td class="day">d38</td><td class="date">Fri 2026-12-18</td><td class="pp">pp. 749–768 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="39" data-pages="19" data-date="2026-12-19" class=""><td class="mark"><input type="checkbox" data-day="39" aria-label="Day 39 done"></td><td class="day">d39</td><td class="date">Sat 2026-12-19</td><td class="pp">pp. 769–787 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 21 · Learning Probabilistic Models</td></tr>
+      <tr data-day="40" data-pages="19" data-date="2026-12-20" class=""><td class="mark"><input type="checkbox" data-day="40" aria-label="Day 40 done"></td><td class="day">d40</td><td class="date">Sun 2026-12-20</td><td class="pp">pp. 788–806 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 22 · Deep Learning</td></tr>
+      <tr data-day="41" data-pages="20" data-date="2026-12-21" class=""><td class="mark"><input type="checkbox" data-day="41" aria-label="Day 41 done"></td><td class="day">d41</td><td class="date">Mon 2026-12-21</td><td class="pp">pp. 807–826 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="42" data-pages="20" data-date="2026-12-22" class=""><td class="mark"><input type="checkbox" data-day="42" aria-label="Day 42 done"></td><td class="day">d42</td><td class="date">Tue 2026-12-22</td><td class="pp">pp. 827–846 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 23 · Reinforcement Learning <span class="ms">★ 75%</span></td></tr>
+      <tr class="week"><td colspan="5">── Week 7 · 2026-12-23 → 2026-12-29 · pp. 847–982 ──</td></tr>
+      <tr data-day="43" data-pages="20" data-date="2026-12-23" class=""><td class="mark"><input type="checkbox" data-day="43" aria-label="Day 43 done"></td><td class="day">d43</td><td class="date">Wed 2026-12-23</td><td class="pp">pp. 847–866 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="44" data-pages="19" data-date="2026-12-24" class=""><td class="mark"><input type="checkbox" data-day="44" aria-label="Day 44 done"></td><td class="day">d44</td><td class="date">Thu 2026-12-24</td><td class="pp">pp. 867–885 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 24 · Natural Language Processing</td></tr>
+      <tr data-day="45" data-pages="19" data-date="2026-12-25" class=""><td class="mark"><input type="checkbox" data-day="45" aria-label="Day 45 done"></td><td class="day">d45</td><td class="date">Fri 2026-12-25</td><td class="pp">pp. 886–904 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="46" data-pages="19" data-date="2026-12-26" class=""><td class="mark"><input type="checkbox" data-day="46" aria-label="Day 46 done"></td><td class="day">d46</td><td class="date">Sat 2026-12-26</td><td class="pp">pp. 905–923 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 25 · Deep Learning for Natural Language Processing</td></tr>
+      <tr data-day="47" data-pages="19" data-date="2026-12-27" class=""><td class="mark"><input type="checkbox" data-day="47" aria-label="Day 47 done"></td><td class="day">d47</td><td class="date">Sun 2026-12-27</td><td class="pp">pp. 924–942 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 26 · Robotics</td></tr>
+      <tr data-day="48" data-pages="20" data-date="2026-12-28" class=""><td class="mark"><input type="checkbox" data-day="48" aria-label="Day 48 done"></td><td class="day">d48</td><td class="date">Mon 2026-12-28</td><td class="pp">pp. 943–962 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="49" data-pages="20" data-date="2026-12-29" class=""><td class="mark"><input type="checkbox" data-day="49" aria-label="Day 49 done"></td><td class="day">d49</td><td class="date">Tue 2026-12-29</td><td class="pp">pp. 963–982 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr class="week"><td colspan="5">── Week 8 · 2026-12-30 → 2027-01-05 · pp. 983–1118 ──</td></tr>
+      <tr data-day="50" data-pages="20" data-date="2026-12-30" class=""><td class="mark"><input type="checkbox" data-day="50" aria-label="Day 50 done"></td><td class="day">d50</td><td class="date">Wed 2026-12-30</td><td class="pp">pp. 983–1002 <span class="pages">(20p)</span></td><td class="ch">⇢ Ch. 27 · Computer Vision</td></tr>
+      <tr data-day="51" data-pages="19" data-date="2026-12-31" class=""><td class="mark"><input type="checkbox" data-day="51" aria-label="Day 51 done"></td><td class="day">d51</td><td class="date">Thu 2026-12-31</td><td class="pp">pp. 1003–1021 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="52" data-pages="19" data-date="2027-01-01" class=""><td class="mark"><input type="checkbox" data-day="52" aria-label="Day 52 done"></td><td class="day">d52</td><td class="date">Fri 2027-01-01</td><td class="pp">pp. 1022–1040 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 28 · Philosophy, Ethics, and Safety of AI</td></tr>
+      <tr data-day="53" data-pages="19" data-date="2027-01-02" class=""><td class="mark"><input type="checkbox" data-day="53" aria-label="Day 53 done"></td><td class="day">d53</td><td class="date">Sat 2027-01-02</td><td class="pp">pp. 1041–1059 <span class="pages">(19p)</span></td><td class="ch"></td></tr>
+      <tr data-day="54" data-pages="19" data-date="2027-01-03" class=""><td class="mark"><input type="checkbox" data-day="54" aria-label="Day 54 done"></td><td class="day">d54</td><td class="date">Sun 2027-01-03</td><td class="pp">pp. 1060–1078 <span class="pages">(19p)</span></td><td class="ch">⇢ Ch. 29 · The Future of AI</td></tr>
+      <tr data-day="55" data-pages="20" data-date="2027-01-04" class=""><td class="mark"><input type="checkbox" data-day="55" aria-label="Day 55 done"></td><td class="day">d55</td><td class="date">Mon 2027-01-04</td><td class="pp">pp. 1079–1098 <span class="pages">(20p)</span></td><td class="ch"></td></tr>
+      <tr data-day="56" data-pages="20" data-date="2027-01-05" class=""><td class="mark"><input type="checkbox" data-day="56" aria-label="Day 56 done"></td><td class="day">d56</td><td class="date">Tue 2027-01-05</td><td class="pp">pp. 1099–1118 <span class="pages">(20p)</span></td><td class="ch"><span class="ms">★ 100%</span></td></tr>
+    </table>
+    <div class="hint">click a box to tick a day — ticks are saved in this browser · <button id="resetbtn" type="button">reset all</button> · /reading in pi prints the same sheet in chat</div>
+  </div>
+<script>
+(function () {
+  "use strict";
+  var KEY = "aima-done-v1";
+  var TOTAL = 56;
+  var TOTAL_PAGES = 1100;
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+  function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { /* private mode */ } }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[type="checkbox"][data-day]'));
+  function refresh() {
+    var done = 0, pages = 0;
+    boxes.forEach(function (box) {
+      var tr = box.closest("tr");
+      if (!tr) return;
+      if (box.checked) {
+        done += 1;
+        pages += parseInt(tr.getAttribute("data-pages") || "0", 10);
+        tr.classList.add("done");
+      } else {
+        tr.classList.remove("done");
+      }
+    });
+    var pct = Math.round(done / TOTAL * 100);
+    document.getElementById("barfill").style.width = pct + "%";
+    document.getElementById("pct").textContent = pct + "%";
+    document.getElementById("daycount").textContent = done + "/" + TOTAL + " days";
+    document.getElementById("pagecount").textContent = pages + "/" + TOTAL_PAGES + " pp. read";
+  }
+  var stored = load();
+  if (Object.keys(stored).length > 0) {
+    boxes.forEach(function (box) { box.checked = !!stored[box.getAttribute("data-day")]; });
+  }
+  boxes.forEach(function (box) {
+    box.addEventListener("change", function () {
+      var s = load();
+      if (box.checked) { s[box.getAttribute("data-day")] = true; }
+      else { delete s[box.getAttribute("data-day")]; }
+      save(s);
+      refresh();
+    });
+    var cell = box.parentElement;
+    if (cell) {
+      cell.addEventListener("click", function (ev) {
+        if (ev.target !== box) {
+          box.checked = !box.checked;
+          box.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      });
+    }
+  });
+  var now = new Date();
+  var pad = function (n) { return String(n).padStart(2, "0"); };
+  var today = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+  Array.prototype.forEach.call(document.querySelectorAll("tr[data-date]"), function (tr) {
+    if (tr.getAttribute("data-date") === today) { tr.classList.add("today"); }
+  });
+  document.getElementById("resetbtn").addEventListener("click", function () {
+    save({});
+    boxes.forEach(function (box) { box.checked = false; });
+    refresh();
+  });
+  refresh();
+})();
+</script>
+</body>
+</html>
